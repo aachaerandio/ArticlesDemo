@@ -1,9 +1,11 @@
 package com.aachaerandio.articlesdemo.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.aachaerandio.articlesdemo.Constants;
 import com.aachaerandio.articlesdemo.R;
 
 public class MainActivity extends AppCompatActivity implements ArticleListFragment.Callback {
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements ArticleListFragme
     }
 
     private void startArticleDetailsActivity(String articleId) {
-
+        Intent intent = new Intent(this, ArticleDetailsActivity.class);
+        Bundle extras = new Bundle();
+        extras.putString(Constants.ARTICLE_ID, articleId);
+        intent.putExtras(extras);
+        startActivity(intent);
     }
 }

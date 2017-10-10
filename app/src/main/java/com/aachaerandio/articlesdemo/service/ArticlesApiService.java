@@ -1,6 +1,7 @@
 package com.aachaerandio.articlesdemo.service;
 
 import com.aachaerandio.articlesdemo.model.Article;
+import com.aachaerandio.articlesdemo.model.ArticleDetailsWrapper;
 import com.aachaerandio.articlesdemo.model.ArticlesWrapper;
 
 import io.reactivex.Observable;
@@ -34,6 +35,6 @@ public class ArticlesApiService {
         Observable<ArticlesWrapper> getArticles();
 
         @GET("content/{id}.json")
-        Observable<Article> getArticleById(@Path("id") String id);
+        Observable<ArticleDetailsWrapper> getArticleById(@Path("id") String id);
     }
 }

@@ -17,7 +17,7 @@ import android.widget.ProgressBar;
 import com.aachaerandio.articlesdemo.R;
 import com.aachaerandio.articlesdemo.model.Article;
 import com.aachaerandio.articlesdemo.presenter.ArticleListPresenter;
-import com.aachaerandio.articlesdemo.presenter.DaggerArticlePresenterComponent;
+import com.aachaerandio.articlesdemo.presenter.di.DaggerArticlePresenterComponent;
 
 import java.util.ArrayList;
 import java.util.List;

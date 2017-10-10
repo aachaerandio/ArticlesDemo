@@ -17,6 +17,9 @@ public class Article {
     @SerializedName("date")
     @Expose
     public String date;
+    @SerializedName("body")
+    @Expose
+    public String body;
 
     public Integer getId() {
         return id;
@@ -48,5 +51,13 @@ public class Article {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
     }
 }

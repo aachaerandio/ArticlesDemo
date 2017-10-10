@@ -3,4 +3,8 @@
 
     <string name="error_general">Error</string>
     <string name="error_action_retry">Retry</string>
+    <string name="article_details">Details</string>
+    <string name="label_subtitle">Subtitle</string>
+    <string name="label_description">Description</string>
+    <string name="label_date">Date</string>
 </resources>
