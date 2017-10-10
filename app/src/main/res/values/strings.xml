@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ArticlesDemo</string>
+
+    <string name="error_general">Error</string>
+    <string name="error_action_retry">Retry</string>
 </resources>

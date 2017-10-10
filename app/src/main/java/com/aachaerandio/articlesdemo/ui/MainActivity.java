@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.aachaerandio.articlesdemo.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ArticleListFragment.Callback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +28,14 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setTitle(R.string.app_name);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
         }
+    }
+
+    @Override
+    public void onArticleClicked(String articleId) {
+        startArticleDetailsActivity(articleId);
+    }
+
+    private void startArticleDetailsActivity(String articleId) {
+
     }
 }

@@ -1,9 +1,7 @@
-package com.aachaerandio.articlesdemo;
+package com.aachaerandio.articlesdemo.service;
 
 import com.aachaerandio.articlesdemo.model.Article;
 import com.aachaerandio.articlesdemo.model.ArticlesWrapper;
-
-import java.util.List;
 
 import io.reactivex.Observable;
 import retrofit2.Retrofit;
