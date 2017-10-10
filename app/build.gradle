@@ -25,6 +25,11 @@ android {
     }
 }
 
+android.applicationVariants.all {
+    def aptOutputDir = new File(buildDir, "generated/source/apt/${it.unitTestVariant.dirName}")
+    it.unitTestVariant.addJavaSourceFoldersToModel(aptOutputDir)
+}
+
 //Versions of dependencies
 ext {
     androidSupportLibrariesVersion = "26.0.2"
@@ -59,4 +64,7 @@ dependencies {
     compile "com.google.dagger:dagger-android-support:$daggerVersion"
 
     testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:2.8.47'
+    androidTestCompile 'org.mockito:mockito-android:2.8.47'
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
 }

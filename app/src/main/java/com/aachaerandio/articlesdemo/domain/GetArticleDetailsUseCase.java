@@ -1,6 +1,5 @@
 package com.aachaerandio.articlesdemo.domain;
 
-import com.aachaerandio.articlesdemo.model.Article;
 import com.aachaerandio.articlesdemo.model.ArticleDetailsWrapper;
 import com.aachaerandio.articlesdemo.service.ArticlesApiService;
 
@@ -17,7 +16,7 @@ public class GetArticleDetailsUseCase {
         this.articlesApiService = articlesApiService;
     }
 
-    public Observable<ArticleDetailsWrapper> execute(String countryId){
-        return articlesApiService.getService().getArticleById(countryId);
+    public Observable<ArticleDetailsWrapper> execute(String articleId){
+        return articlesApiService.getService().getArticleById(articleId);
     }
 }
